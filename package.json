@@ -1,0 +1,16 @@
+{
+	"name": "electron-react-test",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app/electron/main.js",
+	"private": "true",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"electron": "^23.1.3"
+	}
+}
