@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron');
+const isDev = process.env.NODE_ENV === 'development';
 
 function createWindow() {
 	// create new window
@@ -13,7 +14,14 @@ function createWindow() {
 		window.focus();
 	});
 
-	window.loadFile('app/dist/index.html');
+	// load HTML file
+
+	if (isDev) {
+		window.loadFile('app/dist/index.html');
+		// window.loadURL('http://localhost:50992/');
+	} else {
+		window.loadFile('app/dist/index.html');
+	}
 }
 
 app.whenReady().then(() => {
